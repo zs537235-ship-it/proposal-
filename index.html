@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise For You ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="hearts">
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+        <span>💖</span>
+        <span>💘</span>
+        <span>❤️</span>
+        <span>💕</span>
+        <span>💗</span>
+    </div>
+
+
+    <!-- ================= PAGE 1 ================= -->
+
+    <section id="page1" class="page active">
+
+        <div class="card welcome-card">
+
+            <div class="emoji-big">🎁</div>
+
+            <p class="mini-title">
+                A little surprise for you
+            </p>
+
+            <h1>
+                Hey You... ❤️
+            </h1>
+
+            <p class="description">
+                I made a small little website
+                especially for you.
+            </p>
+
+            <button class="main-btn" onclick="nextPage(2)">
+                Open Your Surprise 💌
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAGE 2 ================= -->
+
+    <section id="page2" class="page">
+
+        <div class="card">
+
+            <p class="mini-title">
+                Before anything else...
+            </p>
+
+            <div class="heart-animation">
+                ❤️
+            </div>
+
+            <h1>
+                There's Something
+                I Want To Tell You
+            </h1>
+
+            <p class="description">
+
+                I don't know exactly when it started...
+
+                <br><br>
+
+                Maybe it was your smile.
+                Maybe your voice.
+                Maybe those little things you do
+                without even realizing.
+
+                <br><br>
+
+                But somehow...
+
+                <br>
+
+                <strong>
+                    You became really special to me. ❤️
+                </strong>
+
+            </p>
+
+            <button class="main-btn" onclick="nextPage(3)">
+                Okay... There's More 💕
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAGE 3 FOOD ================= -->
+
+    <section id="page3" class="page">
+
+        <div class="card food-card">
+
+            <p class="mini-title">
+                Important question first 👀
+            </p>
+
+            <div class="food-title">
+                🍽️
+            </div>
+
+            <h1>
+                Aaj Khane Mein
+                Kya Pasand Karogi? ❤️
+            </h1>
+
+            <p class="description">
+                Choose carefully... 😌
+            </p>
+
+
+            <div class="food-options">
+
+                <button class="food-option"
+                    onclick="selectFood('Pizza 🍕')">
+
+                    <span class="food-emoji">
+                        🍕
+                    </span>
+
+                    <span>
+                        Pizza
+                    </span>
+
+                </button>
+
+
+                <button class="food-option"
+                    onclick="selectFood('Burger 🍔')">
+
+                    <span class="food-emoji">
+                        🍔
+                    </span>
+
+                    <span>
+                        Burger
+                    </span>
+
+                </button>
+
+
+                <button class="food-option"
+                    onclick="selectFood('Pasta 🍝')">
+
+                    <span class="food-emoji">
+                        🍝
+                    </span>
+
+                    <span>
+                        Pasta
+                    </span>
+
+                </button>
+
+
+                <button class="food-option"
+                    onclick="selectFood('Chinese 🍜')">
+
+                    <span class="food-emoji">
+                        🍜
+                    </span>
+
+                    <span>
+                        Chinese
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <p id="foodMessage"
+                class="food-message">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAGE 4 DATE ================= -->
+
+    <section id="page4" class="page">
+
+        <div class="card">
+
+            <p class="mini-title">
+                Okay... food sorted 😌
+            </p>
+
+            <div class="date-emoji">
+                🌹
+            </div>
+
+            <h1>
+                Ab Ek Aur Question...
+            </h1>
+
+            <p class="description">
+
+                Agar hum dono ek din
+                saath spend karein...
+
+                <br><br>
+
+                Tum kya choose karogi? ❤️
+
+            </p>
+
+
+            <div class="date-options">
+
+                <button class="date-option"
+                    onclick="chooseDate('Dinner Date 🍽️')">
+
+                    <span>🍽️</span>
+                    <span>Dinner Date</span>
+
+                </button>
+
+
+                <button class="date-option"
+                    onclick="chooseDate('Long Drive 🚗')">
+
+                    <span>🚗</span>
+                    <span>Long Drive</span>
+
+                </button>
+
+
+                <button class="date-option"
+                    onclick="chooseDate('Movie Night 🎬')">
+
+                    <span>🎬</span>
+                    <span>Movie Night</span>
+
+                </button>
+
+
+                <button class="date-option"
+                    onclick="chooseDate('Just Us ❤️')">
+
+                    <span>❤️</span>
+                    <span>Just Us</span>
+
+                </button>
+
+            </div>
+
+
+            <p id="dateMessage"
+                class="food-message">
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAGE 5 LETTER ================= -->
+
+    <section id="page5" class="page">
+
+        <div class="card letter-card">
+
+            <div class="letter-icon">
+                💌
+            </div>
+
+            <p class="mini-title">
+                One last thing...
+            </p>
+
+            <h1>
+                Read This Carefully ❤️
+            </h1>
+
+
+            <div class="letter">
+
+                <p>
+                    Dear You,
+                </p>
+
+                <p>
+                    Life has a funny way of
+                    bringing people together.
+                </p>
+
+                <p>
+                    And somehow,
+                    it brought you into mine.
+                </p>
+
+                <p>
+                    I don't promise that
+                    every day will be perfect...
+                </p>
+
+                <p>
+                    But I promise I'll always try
+                    to make your ordinary days
+                    a little more special.
+                </p>
+
+                <p>
+                    And now...
+                </p>
+
+                <p class="letter-bold">
+                    I have one very important
+                    question for you.
+                </p>
+
+            </div>
+
+
+            <button class="main-btn"
+                onclick="nextPage(6)">
+
+                Open The Question 💍
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAGE 6 PROPOSAL ================= -->
+
+    <section id="page6" class="page">
+
+        <div class="card proposal-card">
+
+            <div class="ring">
+                💍
+            </div>
+
+            <p class="mini-title">
+                So...
+            </p>
+
+            <h1>
+                Will You Be Mine? ❤️
+            </h1>
+
+            <p class="description">
+
+                Not just today.
+
+                <br>
+
+                Not just for a moment.
+
+                <br><br>
+
+                But for all the beautiful moments
+                that are still waiting for us.
+
+            </p>
+
+
+            <div class="proposal-buttons">
+
+                <button id="yesBtn"
+                    class="yes-btn"
+                    onclick="sayYes()">
+
+                    YES ❤️
+
+                </button>
+
+
+                <button id="noBtn"
+                    class="no-btn">
+
+                    NO 😜
+
+                </button>
+
+            </div>
+
+
+            <p class="hint">
+                Think carefully... 👀
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PAGE 7 ================= -->
+
+    <section id="page7" class="page">
+
+        <div class="celebration">
+
+            <div class="fireworks">
+                ✨ ❤️ ✨ 💕 ✨
+            </div>
+
+            <div class="huge-heart">
+                ❤️
+            </div>
+
+            <h1>
+                YAYYYYY! 🥹❤️
+            </h1>
+
+            <h2>
+                You just made me
+                the happiest person alive.
+            </h2>
+
+            <p>
+                I knew you would make
+                this moment special. ❤️
+
+                <br><br>
+
+                From now on,
+                let's create our own little
+                collection of beautiful memories.
+            </p>
+
+            <div class="final-message">
+                ❤️ I LOVE YOU ❤️
+            </div>
+
+            <p class="signature">
+                — Yours, always 💕
+            </p>
+
+            <button class="restart-btn"
+                onclick="restartWebsite()">
+
+                Start Again 🔄
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- Confetti -->
+
+    <div id="confetti"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

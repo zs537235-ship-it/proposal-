@@ -1,0 +1,1453 @@
+/* =========================================================
+                     BASIC RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    background: #ffe6ef;
+}
+
+
+/* =========================================================
+                     PAGE SYSTEM
+========================================================= */
+
+.page {
+
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+
+    padding: 25px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.page.active {
+    display: flex;
+}
+
+
+/* =========================================================
+                     BACKGROUNDS
+========================================================= */
+
+#page1 {
+    background:
+        radial-gradient(circle at top left,
+        #fff 0%,
+        #ffe3ed 35%,
+        #ffc8dc 100%);
+}
+
+
+#page2 {
+    background:
+        linear-gradient(135deg,
+        #ffd9e7,
+        #fff0f5,
+        #ffc6dc);
+}
+
+
+#page3 {
+    background:
+        linear-gradient(135deg,
+        #ffe2ed,
+        #fff5f8,
+        #ffd0e2);
+}
+
+
+#page4 {
+    background:
+        linear-gradient(135deg,
+        #ffd6e5,
+        #fff1f6,
+        #ffc7dc);
+}
+
+
+#page5 {
+    background:
+        linear-gradient(135deg,
+        #ffe0eb,
+        #fff4f8,
+        #ffd1e1);
+}
+
+
+#page6 {
+    background:
+        linear-gradient(135deg,
+        #ffc7dc,
+        #ffeaf2,
+        #ffb8d2);
+}
+
+
+#page7 {
+    background:
+        radial-gradient(circle at center,
+        #fff0f6,
+        #ffc3d9,
+        #ff9fc4);
+}
+
+
+/* =========================================================
+                     MAIN CARD
+========================================================= */
+
+.card {
+
+    width: min(560px, 100%);
+
+    max-height: calc(100dvh - 50px);
+
+    padding: 32px 30px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.9);
+
+    border-radius: 28px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 60px rgba(170, 50, 100, 0.18);
+
+    backdrop-filter: blur(18px);
+
+    overflow-y: auto;
+
+    animation: cardAppear 0.7s ease;
+}
+
+
+/* Scrollbar */
+
+.card::-webkit-scrollbar {
+    width: 5px;
+}
+
+.card::-webkit-scrollbar-thumb {
+    background: #f29abb;
+    border-radius: 20px;
+}
+
+
+/* =========================================================
+                     TEXT
+========================================================= */
+
+.mini-title {
+
+    color: #e55b8b;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 12px;
+}
+
+
+.card h1 {
+
+    color: #b52e62;
+
+    font-size: clamp(28px, 5vw, 40px);
+
+    line-height: 1.15;
+
+    margin-bottom: 18px;
+}
+
+
+.description {
+
+    color: #704b5a;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 24px;
+}
+
+
+.description strong {
+    color: #d93670;
+}
+
+
+/* =========================================================
+                     BUTTON
+========================================================= */
+
+.main-btn {
+
+    border: none;
+
+    background:
+        linear-gradient(135deg,
+        #ff5f91,
+        #e83d76);
+
+    color: white;
+
+    padding: 14px 25px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(232, 61, 118, 0.3);
+
+    transition: 0.25s;
+}
+
+
+.main-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 30px rgba(232, 61, 118, 0.4);
+}
+
+
+.main-btn:active {
+    transform: scale(0.97);
+}
+
+
+/* =========================================================
+                     PAGE 1
+========================================================= */
+
+.welcome-card {
+    padding-top: 38px;
+    padding-bottom: 38px;
+}
+
+
+.emoji-big {
+
+    font-size: 65px;
+
+    margin-bottom: 10px;
+
+    animation: floatEmoji 2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+                     PAGE 2
+========================================================= */
+
+.heart-animation {
+
+    font-size: 70px;
+
+    margin: 5px 0 15px;
+
+    animation: heartbeat 1.2s infinite;
+}
+
+
+/* =========================================================
+                     FOOD PAGE
+========================================================= */
+
+.food-title {
+
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+
+.food-options {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+
+.food-option {
+
+    min-height: 100px;
+
+    border: 2px solid #ffd0df;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 20px;
+
+    color: #8f3157;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    transition: 0.25s;
+}
+
+
+.food-option:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #ff78a6;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px rgba(200, 60, 110, 0.15);
+}
+
+
+.food-emoji {
+    font-size: 35px;
+}
+
+
+.food-message {
+
+    color: #d63870;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    min-height: 22px;
+}
+
+
+/* =========================================================
+                     DATE PAGE
+========================================================= */
+
+.date-emoji {
+
+    font-size: 60px;
+
+    margin-bottom: 10px;
+
+    animation: ringFloat 2s ease-in-out infinite;
+}
+
+
+.date-options {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    margin: 20px 0;
+}
+
+
+.date-option {
+
+    min-height: 70px;
+
+    border: 2px solid #ffd0df;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 18px;
+
+    color: #8f3157;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.25s;
+}
+
+
+.date-option:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #ff78a6;
+
+    background: white;
+
+    box-shadow:
+        0 10px 25px rgba(200, 60, 110, 0.15);
+}
+
+
+/* =========================================================
+                     LETTER PAGE
+========================================================= */
+
+.letter-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 8px;
+}
+
+
+.letter {
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            rgba(255, 248, 250, 0.9),
+            rgba(255, 241, 246, 0.9)
+        );
+
+    border-left: 4px solid #ff6c9e;
+
+    border-radius: 14px;
+
+    padding: 20px;
+
+    margin: 18px 0 22px;
+}
+
+
+.letter p {
+
+    color: #674653;
+
+    font-size: 15px;
+
+    line-height: 1.65;
+
+    margin-bottom: 12px;
+}
+
+
+.letter p:last-child {
+    margin-bottom: 0;
+}
+
+
+.letter-bold {
+
+    color: #d5326c !important;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+                     PROPOSAL PAGE
+========================================================= */
+
+.proposal-card {
+    position: relative;
+}
+
+
+.ring {
+
+    font-size: 65px;
+
+    margin-bottom: 5px;
+
+    animation: ringFloat 2s ease-in-out infinite;
+}
+
+
+.proposal-buttons {
+
+    min-height: 80px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 20px;
+
+    position: relative;
+}
+
+
+.yes-btn,
+.no-btn {
+
+    border: none;
+
+    border-radius: 50px;
+
+    padding: 14px 30px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.yes-btn {
+
+    background: #e83d76;
+
+    color: white;
+
+    box-shadow:
+        0 10px 25px rgba(232, 61, 118, 0.3);
+
+    transition: 0.2s;
+}
+
+
+.yes-btn:hover {
+
+    transform: scale(1.08);
+
+    background: #d92f69;
+}
+
+
+.no-btn {
+
+    background: #f0e7ea;
+
+    color: #795463;
+
+    transition: 0.15s;
+}
+
+
+.hint {
+
+    margin-top: 18px;
+
+    color: #a56778;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+                     CELEBRATION
+========================================================= */
+
+.celebration {
+
+    width: min(620px, 100%);
+
+    max-height: calc(100dvh - 50px);
+
+    overflow-y: auto;
+
+    padding: 35px 30px;
+
+    text-align: center;
+
+    background: rgba(255, 255, 255, 0.75);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 25px 70px rgba(160, 40, 90, 0.2);
+
+    animation: celebrationAppear 0.8s ease;
+}
+
+
+.celebration::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+.celebration::-webkit-scrollbar-thumb {
+
+    background: #f29abb;
+
+    border-radius: 20px;
+}
+
+
+.fireworks {
+
+    font-size: 25px;
+
+    margin-bottom: 10px;
+
+    animation: sparkle 1.2s infinite;
+}
+
+
+.huge-heart {
+
+    font-size: 100px;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+
+    animation: hugeHeartbeat 1.2s infinite;
+}
+
+
+.celebration h1 {
+
+    color: #c52862;
+
+    font-size: clamp(36px, 7vw, 55px);
+
+    margin-bottom: 12px;
+}
+
+
+.celebration h2 {
+
+    color: #a33b62;
+
+    font-size: clamp(19px, 4vw, 25px);
+
+    line-height: 1.4;
+
+    margin-bottom: 18px;
+}
+
+
+.celebration p {
+
+    color: #704b5a;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+.final-message {
+
+    margin: 22px 0 12px;
+
+    color: #d52f6b;
+
+    font-size: clamp(22px, 5vw, 32px);
+
+    font-weight: bold;
+
+    animation: heartbeat 1.3s infinite;
+}
+
+
+.signature {
+
+    font-style: italic;
+
+    color: #b34b71 !important;
+
+    margin-bottom: 20px;
+}
+
+
+.restart-btn {
+
+    border: none;
+
+    background: white;
+
+    color: #c52e66;
+
+    border: 2px solid #ff9cbb;
+
+    padding: 11px 20px;
+
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.25s;
+}
+
+
+.restart-btn:hover {
+
+    background: #fff0f5;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+                     FLOATING HEARTS
+========================================================= */
+
+.hearts {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 1;
+}
+
+
+.hearts span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    font-size: 20px;
+
+    opacity: 0.45;
+
+    animation: floatHeart linear infinite;
+}
+
+
+.hearts span:nth-child(1) {
+    left: 5%;
+    animation-duration: 8s;
+    animation-delay: 0s;
+}
+
+.hearts span:nth-child(2) {
+    left: 18%;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+
+.hearts span:nth-child(3) {
+    left: 32%;
+    animation-duration: 9s;
+    animation-delay: 1s;
+}
+
+.hearts span:nth-child(4) {
+    left: 48%;
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+
+.hearts span:nth-child(5) {
+    left: 63%;
+    animation-duration: 8s;
+    animation-delay: 1.5s;
+}
+
+.hearts span:nth-child(6) {
+    left: 76%;
+    animation-duration: 10s;
+    animation-delay: 0.5s;
+}
+
+.hearts span:nth-child(7) {
+    left: 88%;
+    animation-duration: 9s;
+    animation-delay: 2.5s;
+}
+
+.hearts span:nth-child(8) {
+    left: 95%;
+    animation-duration: 12s;
+    animation-delay: 4s;
+}
+
+
+/* =========================================================
+                     CONFETTI
+========================================================= */
+
+#confetti {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 9999;
+}
+
+
+.confetti-piece {
+
+    position: fixed;
+
+    top: -50px;
+
+    animation:
+        confettiFall linear forwards;
+}
+
+
+/* =========================================================
+                     ANIMATIONS
+========================================================= */
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(25px)
+            scale(0.96);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes celebrationAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(0.8)
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1)
+            translateY(0);
+    }
+}
+
+
+@keyframes floatEmoji {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+@keyframes ringFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(-3deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(3deg);
+    }
+}
+
+
+@keyframes hugeHeartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.6;
+        transform: scale(1.1);
+    }
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.45;
+    }
+
+    90% {
+        opacity: 0.45;
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+                     TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .page {
+        padding: 18px;
+    }
+
+
+    .card {
+
+        width: min(520px, 100%);
+
+        padding: 28px 24px;
+
+        border-radius: 25px;
+    }
+
+
+    .card h1 {
+        font-size: 30px;
+    }
+
+
+    .description {
+        font-size: 15px;
+    }
+
+
+    .emoji-big {
+        font-size: 58px;
+    }
+
+
+    .heart-animation {
+        font-size: 62px;
+    }
+
+
+    .food-title,
+    .date-emoji {
+        font-size: 55px;
+    }
+
+
+    .celebration {
+
+        width: min(520px, 100%);
+
+        padding: 30px 24px;
+    }
+
+
+    .huge-heart {
+        font-size: 85px;
+    }
+
+}
+
+
+/* =========================================================
+                     MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        padding: 12px;
+
+        min-height: 100dvh;
+    }
+
+
+    .card {
+
+        width: 100%;
+
+        max-height: calc(100dvh - 24px);
+
+        padding: 24px 18px;
+
+        border-radius: 22px;
+    }
+
+
+    .card h1 {
+
+        font-size: 26px;
+
+        line-height: 1.2;
+
+        margin-bottom: 14px;
+    }
+
+
+    .description {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 20px;
+    }
+
+
+    .mini-title {
+        font-size: 12px;
+    }
+
+
+    .main-btn {
+
+        width: 100%;
+
+        padding: 13px 18px;
+
+        font-size: 14px;
+    }
+
+
+    .emoji-big {
+        font-size: 52px;
+    }
+
+
+    .heart-animation {
+        font-size: 55px;
+    }
+
+
+    .food-title,
+    .date-emoji {
+        font-size: 50px;
+    }
+
+
+    .food-options {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 9px;
+
+        margin: 15px 0;
+    }
+
+
+    .food-option {
+
+        min-height: 88px;
+
+        border-radius: 16px;
+
+        font-size: 14px;
+    }
+
+
+    .food-emoji {
+        font-size: 29px;
+    }
+
+
+    .date-options {
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 9px;
+
+        margin: 15px 0;
+    }
+
+
+    .date-option {
+
+        min-height: 62px;
+
+        border-radius: 15px;
+
+        font-size: 13px;
+
+        padding: 8px;
+    }
+
+
+    .letter {
+
+        padding: 16px;
+
+        margin: 15px 0 18px;
+    }
+
+
+    .letter p {
+
+        font-size: 14px;
+
+        line-height: 1.55;
+
+        margin-bottom: 10px;
+    }
+
+
+    .letter-icon {
+        font-size: 48px;
+    }
+
+
+    .ring {
+        font-size: 55px;
+    }
+
+
+    .proposal-buttons {
+
+        gap: 10px;
+
+        margin-top: 15px;
+    }
+
+
+    .yes-btn,
+    .no-btn {
+
+        padding: 12px 23px;
+
+        font-size: 14px;
+    }
+
+
+    .celebration {
+
+        width: 100%;
+
+        max-height: calc(100dvh - 24px);
+
+        padding: 26px 18px;
+
+        border-radius: 22px;
+    }
+
+
+    .fireworks {
+        font-size: 20px;
+    }
+
+
+    .huge-heart {
+        font-size: 75px;
+    }
+
+
+    .celebration h1 {
+        font-size: 38px;
+    }
+
+
+    .celebration h2 {
+        font-size: 19px;
+    }
+
+
+    .celebration p {
+        font-size: 14px;
+    }
+
+
+    .final-message {
+        font-size: 24px;
+    }
+
+}
+
+
+/* =========================================================
+                     SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .page {
+        padding: 8px;
+    }
+
+
+    .card {
+
+        max-height: calc(100dvh - 16px);
+
+        padding: 20px 14px;
+
+        border-radius: 19px;
+    }
+
+
+    .card h1 {
+        font-size: 23px;
+    }
+
+
+    .description {
+        font-size: 13px;
+    }
+
+
+    .food-option {
+
+        min-height: 78px;
+
+        font-size: 13px;
+    }
+
+
+    .food-emoji {
+        font-size: 25px;
+    }
+
+
+    .date-option {
+        font-size: 12px;
+    }
+
+
+    .letter p {
+        font-size: 13px;
+    }
+
+
+    .huge-heart {
+        font-size: 65px;
+    }
+
+
+    .celebration h1 {
+        font-size: 32px;
+    }
+
+
+    .celebration h2 {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================================================
+               VERY SHORT MOBILE SCREENS
+========================================================= */
+
+@media (max-height: 650px) and (max-width: 600px) {
+
+    .card {
+
+        padding-top: 17px;
+
+        padding-bottom: 17px;
+    }
+
+
+    .emoji-big {
+        font-size: 42px;
+
+        margin-bottom: 4px;
+    }
+
+
+    .heart-animation {
+        font-size: 43px;
+
+        margin: 2px 0 8px;
+    }
+
+
+    .food-title,
+    .date-emoji {
+        font-size: 40px;
+    }
+
+
+    .card h1 {
+        font-size: 22px;
+    }
+
+
+    .description {
+        margin-bottom: 13px;
+    }
+
+
+    .food-option {
+        min-height: 65px;
+    }
+
+
+    .date-option {
+        min-height: 52px;
+    }
+
+
+    .letter {
+        margin: 10px 0 14px;
+
+        padding: 12px;
+    }
+
+
+    .letter p {
+        margin-bottom: 7px;
+    }
+
+
+    .ring {
+        font-size: 45px;
+    }
+
+
+    .celebration {
+        padding: 20px 15px;
+    }
+
+
+    .huge-heart {
+        font-size: 55px;
+    }
+
+}
